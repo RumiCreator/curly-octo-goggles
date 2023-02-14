@@ -55,7 +55,7 @@
   execInput.style.maxWidth = "100%";
   execInput.style.lineHeight = 1.5;
   execInput.style.borderRadius = "5px";
-  execInput.style.fontSize = "7px";
+  execInput.style.fontSize = "4px";
   execInput.style.border = "1px solid #ccc";
   execInput.style.boxShadow = "1px 1px 1px #999";
 
