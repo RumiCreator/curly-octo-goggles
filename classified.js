@@ -8,7 +8,7 @@
   GUI.style.left = "0px";
   GUI.style.backgroundColor = "darkRed";
   GUI.style.borderRadius = "6px"
-  GUI.style.height = "400px";
+  GUI.style.height = "200px";
   GUI.style.width = "250px";
   GUI.style.boxShadow = "0 16px 32px 0 rgba(0,0,0,0.2), 0 12px 40px 0 rgba(0,0,0,0.19)";
   GUI.style.scrollTop = "200px";
