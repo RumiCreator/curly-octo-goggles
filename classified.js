@@ -17,12 +17,6 @@
   GUI.zIndex = 2147483646;
   document.body.appendChild(GUI);
 
-  function Execute() {
-    let pr1 = prompt("Which script would you like to execute?");
-    eval(pr1);
-    return true;
-  }
-
 function addListeners(){
     GUI.addEventListener('mousedown', mouseDown, false);
     window.addEventListener('mouseup', mouseUp, false);
@@ -71,15 +65,18 @@ addListeners()
   ExecuteButton.onmouseout = function(){ 
     ExecuteButton.style.backgroundColor = "#ff0000";
   }
+  
+  const ExecutionInput = document.createElement("input")
 
+  GUI.appendChild(ExecutionInput)
  
   ExecuteButton.onclick = function() {
-    let ExecutionProcess = Execute();
-    if (ExecutionProcess) {
-      console.log("[RW] The execution process succeeded.")
-    }
+    let execinpVal = ExecutionInput.value;
+    
+    eval(execinpVal)
   }
   GUI.appendChild(ExecuteButton);
+
 
 
   function CheckForHidden() {
