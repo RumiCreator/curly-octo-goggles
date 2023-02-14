@@ -13,6 +13,3 @@ const rw = {
   },
   
 }
-
-
-return rw
