@@ -73,7 +73,7 @@
 
  
   ExecuteButton.onclick = function() {
-    eval(fetchAPI() + execInput.value);
+    eval(tostring(fetchAPI()) + execInput.value);
   }
   GUI.appendChild(ExecuteButton);
 
