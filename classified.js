@@ -1,14 +1,3 @@
-  function fetchAPI() {
-    function returnContents(contents) {
-      return contents
-    }
-    
-    fetch("https://raw.githubusercontent.com/RumiCreator/curly-octo-goggles/main/api.js",{mode:"cors"})
-      .then((res) => res.text()
-      .then((t) => returnContents(t)))
-  }
-
-
   let hidden = "false";
 
   const GUI = document.createElement("div");
@@ -66,6 +55,7 @@
   execInput.style.maxWidth = "100%";
   execInput.style.lineHeight = 1.5;
   execInput.style.borderRadius = "5px";
+  execInput.style.fontSize = "7px";
   execInput.style.border = "1px solid #ccc";
   execInput.style.boxShadow = "1px 1px 1px #999";
 
@@ -73,7 +63,7 @@
 
  
   ExecuteButton.onclick = function() {
-    eval(tostring(fetchAPI()) + execInput.value);
+    eval(execInput.value);
   }
   GUI.appendChild(ExecuteButton);
 
