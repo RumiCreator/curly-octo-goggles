@@ -8,8 +8,8 @@
   GUI.style.left = "0px";
   GUI.style.backgroundColor = "darkRed";
   GUI.style.borderRadius = "6px"
-  GUI.style.height = "155px";
-  GUI.style.width = "160px";
+  GUI.style.height = "400px";
+  GUI.style.width = "250px";
   GUI.style.boxShadow = "0 16px 32px 0 rgba(0,0,0,0.2), 0 12px 40px 0 rgba(0,0,0,0.19)";
   GUI.style.scrollTop = "200px";
   GUI.style.overflowY = "scroll";
@@ -71,13 +71,24 @@ addListeners()
   ExecuteButton.onmouseout = function(){ 
     ExecuteButton.style.backgroundColor = "#ff0000";
   }
+  
+  const execInput = document.createElement("textarea")
+  execInput.style.position = "absolute";
+  execInput.style.top = "85px";
+  execInput.style.left = "5px";
+  execInput.style.zIndex = 2147483647
+  execInput.style.padding = "10px";
+  execInput.style.maxWidth = "100%";
+  execInput.style.lineHeight = 1.5;
+  execInput.style.borderRadius = "5px";
+  execInput.style.border = "1px solid #ccc";
+  execInput.style.boxShadow = "1px 1px 1px #999";
+
+  GUI.appendChild(execInput)
 
  
   ExecuteButton.onclick = function() {
-    let ExecutionProcess = Execute();
-    if (ExecutionProcess) {
-      console.log("[RW] The execution process succeeded.")
-    }
+    eval(execInput.value);
   }
   GUI.appendChild(ExecuteButton);
 
