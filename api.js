@@ -1,8 +1,8 @@
 const rw = {
-  ["executeScript"] = function(params) {
+  "executeScript": function(params) {
     eval(params)
   },
-  ["getBodyFromSite"] = function(params) {
+  "getBodyFromSite": function(params) {
     function returnBody(body){
       return body;
     }
