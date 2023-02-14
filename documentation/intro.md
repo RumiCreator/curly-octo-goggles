@@ -19,7 +19,7 @@ Once done, Rumi-Ware is now usable.
 ## API
 
 Our API only offers a few functions, as it is currently being developed right now, but we are trying our best to add way more than that.
-You can fetch our API using the `fetch()` function, and once Rumi-Ware is released, there will be code for it.
+You can fetch our API using `fetch("https://raw.githubusercontent.com/RumiCreator/curly-octo-goggles/main/api.js",{mode:"cors"}).then((res)=>res.text().then((t)=>eval(t)))`, and once Rumi-Ware is released, the API will be better than ever.
 
 ## Execution
 
