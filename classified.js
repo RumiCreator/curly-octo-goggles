@@ -1,6 +1,15 @@
+  function fetchAPI() {
+    function returnContents(contents) {
+      return contents
+    }
+    
+    fetch("https://raw.githubusercontent.com/RumiCreator/curly-octo-goggles/main/api.js",{mode:"cors"})
+      .then((res) => res.text()
+      .then((t) => returnContents(t)))
+  }
+
 
   let hidden = "false";
-
 
   const GUI = document.createElement("div");
   GUI.style.position = "absolute";
@@ -64,7 +73,7 @@
 
  
   ExecuteButton.onclick = function() {
-    eval(execInput.value);
+    eval(fetchAPI() + execInput.value);
   }
   GUI.appendChild(ExecuteButton);
 
