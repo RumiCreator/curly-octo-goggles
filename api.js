@@ -15,4 +15,4 @@ const rw = {
 }
 
 
-rw.executeScript("console.log('hi')")
+return rw
