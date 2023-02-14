@@ -23,30 +23,6 @@
     return true;
   }
 
-function addListeners(){
-    GUI.addEventListener('mousedown', mouseDown, false);
-    window.addEventListener('mouseup', mouseUp, false);
-    
-}
-
-function mouseUp()
-{
-    window.removeEventListener('mousemove', divMove, true);
-} 
-
-function mouseDown(e){
-  window.addEventListener('mousemove', divMove, true);
-}
-
-function divMove(e){
-  var div = GUI;
-  div.style.position = 'absolute';
-  div.style.top = e.clientY + 'px';
-  div.style.left = e.clientX + 'px';
-}
-
-addListeners()
-
   const ExecuteButton = document.createElement('button');
   ExecuteButton.innerHTML = "Execute Script";
   ExecuteButton.style.zIndex = 2147483647;
